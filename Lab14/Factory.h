@@ -15,7 +15,7 @@ private:
 public:
 	// utworzenie obiektu dowolnego typu o podanej wartoœci
 	template <typename T>
-	void prototype(T value);
+	void prototype(T value) const;
 
 	// funkcja wypisuj¹ca wartoœæ stworzonego obiektu
 	template<typename T>
@@ -31,7 +31,7 @@ template<typename T>
 bool Factory::Item<T>::isFilled = false;
 
 template <typename T>
-void Factory::prototype(T value)
+void Factory::prototype(T value) const
 {
 	// przypisanie wartoœci
 	Item<T>::item = value;
